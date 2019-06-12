@@ -1,2 +1,2 @@
-# scrapy_wechat
+# scrapy-wechat
 wechat official account crawling program
