@@ -102,7 +102,7 @@ class WechatDownloaderMiddleware(object):
                 time.sleep(3)
             # go to article content
             spider.browser.find_elements_by_xpath(
-                '//div[@class="weui_media_bd"]')[spider.page_index].click()
+                '//div[@class="weui_media_bd"]')[2].click()
             # prepare to go to next page
             spider.page_index += 1
 

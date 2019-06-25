@@ -9,5 +9,14 @@
 class WechatPipeline(object):
     def process_item(self, item, spider):
         article = dict(item)
-        print(article)
+        spider.ocean.article.update(
+            {'title': article['title']},
+            {
+                'title': article['title'],
+                'date': article['date'],
+                'html': article['html'],
+                'markdown': article['markdown']
+            },
+            True
+        )
         return item

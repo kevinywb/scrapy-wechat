@@ -21,6 +21,9 @@ RANDOM_UA_TYPE = 'random'
 LOG_LEVEL = 'ERROR'
 LOG_FILE = 'log.txt'
 
+# output
+FEED_EXPORT_ENCODING = 'utf-8'
+
 # mongodb
 DB_MONGO_HOST = 'localhost'
 DB_MONGO_PORT = 27017
