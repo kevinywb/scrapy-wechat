@@ -22,10 +22,11 @@ class SogouSpider(scrapy.Spider):
     ]
     start_urls = [
         # 'https://weixin.sogou.com/weixin?query=ImportNew'  # ImportNew
-        # 'https://weixin.sogou.com/weixin?query=dotnet%E8%B7%A8%E5%B9%B3%E5%8F%B0'   # dotnet跨平台
+        # 'https://weixin.sogou.com/weixin?query=%E6%9E%B6%E6%9E%84%E5%B8%88%E4%B9%8B%E8%B7%AF'   # 架构师之路
+        'https://weixin.sogou.com/weixin?query=dotnet%E8%B7%A8%E5%B9%B3%E5%8F%B0'   # dotnet跨平台
         # 'https://weixin.sogou.com/weixin?query=%E9%98%BF%E9%87%8C%E6%8A%80%E6%9C%AF'  # 阿里技术
         # 'https://weixin.sogou.com/weixin?query=%E8%8A%8B%E9%81%93%E6%BA%90%E7%A0%81'  # 芋道源码
-        'https://weixin.sogou.com/weixin?query=k8s%E4%B8%AD%E6%96%87%E7%A4%BE%E5%8C%BA'   # K8S中文社区
+        # 'https://weixin.sogou.com/weixin?query=k8s%E4%B8%AD%E6%96%87%E7%A4%BE%E5%8C%BA'   # K8S中文社区
         # 'https://weixin.sogou.com/weixin?query=thoughtworks%E6%B4%9E%E8%A7%81'  # Thoughtworks洞见
     ]
 
@@ -83,7 +84,7 @@ class SogouSpider(scrapy.Spider):
                 date = date.replace('年', '/')
                 date = date.replace('月', '/')
                 date = date.replace('日', '')
-                if date == self.today.replace('/0', '/'):
+                if date == '2019/7/2':
                     self.page_count += 1
 
         # whether need to request the next page

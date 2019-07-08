@@ -47,8 +47,8 @@ class Html2Markdown(HTMLParser):
     @property
     def output(self):
         r = self.__output
-        r = r.replace('  ', '')
-        r = r.replace('\n\n\n', '\n')
+        # r = r.replace('  ', '')
+        # r = r.replace('\n\n\n', '\n')
         r = r.replace('****', '')
         r = r.replace('```  ```', '')
         return r.strip()
@@ -99,7 +99,7 @@ class Html2Markdown(HTMLParser):
 
     # handle text data
     def handle_data(self, data):
-        data = data.replace('\xa0', '')
+        # data = data.replace('\xa0', '')
         if len(self.__content) > 0:
             self.__output += self.__content.replace(self.__placeholder, data)
             self.__content = ''
